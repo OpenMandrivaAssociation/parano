@@ -1,5 +1,5 @@
 %define name	parano
-%define rel	1
+%define rel	2
 %define version	0.3.5
 
 Name:		%{name}

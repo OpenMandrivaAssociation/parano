@@ -1,5 +1,5 @@
 %define name	parano
-%define rel	2
+%define rel	3
 %define version	0.3.5
 
 Name:		%{name}
@@ -19,12 +19,6 @@ BuildRequires:	imagemagick
 BuildRequires:	pygtk2.0
 Requires:	pygtk2.0
 Requires:	pygtk2.0-libglade
-%if %mdkversion < 200900
-Requires(post):	desktop-common-data
-Requires(postun):	desktop-common-data
-Requires(post):	desktop-file-utils
-Requires(postun):	desktop-file-utils
-%endif
 
 %description
 Parano is a GNOME program to create, edit and verify hashfiles.
@@ -41,6 +35,7 @@ For now MD5, SHA-1 and SFV formats are supported.
 %install
 %{__rm} -rf %{buildroot}
 %makeinstall_std
+
 %find_lang %{name}
 
 #icons
@@ -57,16 +52,6 @@ convert -scale 16 src/parano-icon.png %{buildroot}%{_miconsdir}/%name.png
 %clean
 %{__rm} -rf %{buildroot}
 
-%if %mdkversion < 200900
-%post
-%{update_desktop_database}
-%{update_menus}
-
-%postun
-%{clean_desktop_database}
-%{clean_menus}
-%endif
-
 %files -f %{name}.lang
 %defattr(-,root,root,-)
 %doc TODO AUTHORS
@@ -79,4 +64,3 @@ convert -scale 16 src/parano-icon.png %{buildroot}%{_miconsdir}/%name.png
 %{_liconsdir}/%name.png
 %{_iconsdir}/%name.png
 %{_miconsdir}/%name.png
-

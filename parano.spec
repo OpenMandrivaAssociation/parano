@@ -64,3 +64,18 @@ convert -scale 16 src/parano-icon.png %{buildroot}%{_miconsdir}/%name.png
 %{_liconsdir}/%name.png
 %{_iconsdir}/%name.png
 %{_miconsdir}/%name.png
+
+
+%changelog
+* Tue Jan 18 2011 Jani Välimaa <wally@mandriva.org> 0.3.5-3mdv2011.0
++ Revision: 631614
+- drop support for old mdv releases
+
+  + Oden Eriksson <oeriksson@mandriva.com>
+    - the mass rebuild of 2010.0 packages
+
+* Sat Jun 06 2009 Jani Välimaa <wally@mandriva.org> 0.3.5-1mdv2010.0
++ Revision: 383392
+- imported package parano
+
+

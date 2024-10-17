@@ -8,7 +8,7 @@ Release:	%mkrel %{rel}
 Summary:	Compute, create and edit MD5, SHA-1 and SFV files
 License:	GPLv2+
 Group:		File tools
-URL:		http://parano.berlios.de/
+URL:		https://parano.berlios.de/
 Source0:	http://prdownload.berlios.de/parano/%{name}-%{version}.tar.gz
 Patch0:		parano-desktop_file_fix.patch
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-root
